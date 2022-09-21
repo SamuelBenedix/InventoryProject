@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes as Switch, Route, useLocation } from 'react-router-dom';
 import {
-  FormSupplier,
   Home,
   Inventory,
   InventoryDetail,
@@ -20,7 +19,6 @@ const Routes = () => {
           <Switch location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/inventory" element={<Inventory />} />
-            <Route path="/supplier/add" element={<FormSupplier />} />
             <Route path="/inventory/detail/:id" element={<InventoryDetail />} />
             <Route
               path="/inventory/update/:id"

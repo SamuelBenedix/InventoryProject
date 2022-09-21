@@ -11,9 +11,10 @@ import {
 } from './styles';
 
 const Home = () => {
-  const [data, setData] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     setData([]);
@@ -23,13 +24,14 @@ const Home = () => {
       )
       .then((res) => {
         setData(res.data.data);
-      });
+      })
+      .catch((er) => console.log(er));
   }, []);
 
   return (
     <div className={styContainer}>
       <div className={styContainerTop}>
-        <h1 className={styTitle}>Supplier </h1>
+        <h1 className={styTitle}>Supplier</h1>
         {data ? (
           data.map((e, i) => (
             <div key={i}>

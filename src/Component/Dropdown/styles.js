@@ -24,8 +24,6 @@ export const stySelect = css`
   }
 `;
 
-
-
 export const styLabel = css`
   margin-bottom: 1rem;
 `;
